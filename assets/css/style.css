@@ -5,6 +5,27 @@ header{
     justify-content: space-between;
     align-items: center;
 
+    /* ウインドの設定 */
+
+
+    position: fixed; 
+    /* ウィンドウを基準に画面に固定 */
+
+    width: 100%; 
+    /* 幅いっぱいを指定 */
+    height: 150px; 
+    /* 高さを50pxに指定 */
+    
+    padding: 10px 50px;
+    /* ヘッダーに上下左右それぞれ余白を指定 */
+    box-sizing: border-box; 
+    /* padding分を含んで幅を100%にするため */
+
+    top: 0;
+    /* 上下の固定位置を上から0pxにする */
+    left: 0; 
+    /* 左右の固定位置を左から0pxにする */
+
     background-color:white;
 }
 
@@ -33,30 +54,83 @@ header{
     width: 120px;
     height: 40px;
     padding: 10;
-    font-family: monospace;
+    /* フォント */
+    font-family: 'Bebas Neue', cursive;
     /* display: inline-block; */
 }
 
-/* 敷き詰められたパンの画像の大きさ調整 */
-.pan{
-    width: 100%;
-    height: auto;
+
+/* ボタンにカーソルを合わせると動く */
+.nav1:hover {
+    animation: pulsation .7s alternate infinite;
+
+    }
+
+  
+  @keyframes pulsation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
 }
+
+.nav2:hover {
+    animation: pulsation .7s alternate infinite;
+  }
+  
+  @keyframes pulsation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+
+.nav3:hover {
+    animation: pulsation .7s alternate infinite;
+  }
+  
+  @keyframes pulsation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+
+.nav4:hover {
+    animation: pulsation .7s alternate infinite;
+  }
+  
+  @keyframes pulsation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+
+.nav5:hover {
+    animation: pulsation .7s alternate infinite;
+  }
+  
+  @keyframes pulsation {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.9); }
+    100% { transform: scale(1.1); }
+}
+
 
 /* ティエリーの文字 */
 h1{
     background-image: url(../img/敷き詰められたパン.png);
+
+    font-size: 100px;
     
     /* 画像サイズ */
     width: 100%;
-    height: 50vh;   
+    /* height: 50vh;   */
+    height: 450px;
+    
+    padding-top: 200px;
     
     /* 題名のところの装飾 */
     color: white;
-    font-size: 100px;
-    font-family: monospace;
-    
-    color: white;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
     /* 太文字 */
     font-weight: bold;
 
@@ -65,34 +139,25 @@ h1{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
-}
-
-/* モバイルファースト */
-h1{
-    font-size: 30px;
-}
-
-/* (min-width: 800x)画面横幅が800pxより大きい時 */
-
-@media screen and (min-width: 800px){
-    h1{
-        font-size: 100px;
-    }
-    
 }
 
 
 /* メインページ　CONCEPT */
 /* 題名 */
 h2{
-    font-size: 100px;
-    font-family: monospace;
+    font-size: 300px;
+    font-family: 'Bebas Neue', cursive;
     text-align:center;
     margin-top: 150px ;
     margin-bottom: 50px;
     /* 太字 */
     font-weight: bold;
+}
+
+.image-products1{
+    font-size: 20px;
+    font-weight: bold;
+    font-family: monospace;
 }
 
 /* モバイルファースト */
@@ -109,6 +174,8 @@ h2{
     
 }
 
+
+
 /* お店のテーマ */
 .contents{
     font-size: 25px;
@@ -116,6 +183,9 @@ h2{
     background-color: rgba(0,0,0,0.5);
     padding: 50px;
     border-radius: 30px;
+    color: white;
+    /* font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; */
+    font-family: monospace;
 }
 
 
@@ -184,17 +254,21 @@ h2{
     font-size: 50px;
     text-align:center;
     margin-bottom: 30px;
+    font-weight: bold;
+
 }
 
 /* フィユテと説明文の設定 */
 
 .contents-scoreimge{
-    height: 200px;
+    height: 250px;
     margin: 0px 20px;
 }
 
 .description{
-    width: 50%;
+    width: 40%;
+    color: white;
+    font-family: monospace;
 }
 
 .contents1{
@@ -215,6 +289,7 @@ h2{
     font-size: 50px;
     text-align:center;
     margin: 50px;
+    font-weight: bold;
 }
 
 /* ３つの画像を横に並べる */
@@ -238,9 +313,12 @@ h2{
 
 /* メインページ　access */
 .a-imge{
-    height: 300px;
+    height: 370px;
     margin: 0px 20px;
+    margin-bottom: 30px;
 }
+
+
 
 /* .adress{
     width: 50%;
@@ -249,15 +327,34 @@ h2{
 .contents3{
     /* 説明と画像の部分 */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 20px auto;
+    margin: 50px;
     font-size: 23px;
     text-align: left;
 }
 
+.a-point{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.adress{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
+}
 
 /* メインページ　SNS */
+.youtube{
+    margin-top: 50px;
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 /* 画像に合わせると黒くなってリンクに飛ぶ */
 .insta{
@@ -272,6 +369,7 @@ h2{
      /* 動作時間 */
     transition-duration: 0.3s;
   }
+
 
 
 /* マウスがボタンに重なったときの動き最終地点 */
@@ -307,4 +405,17 @@ h3{
     color: white;
     background-color: black;
     padding: 30px;
+}
+
+/* 一番下の敷き詰められたパン */
+/* 敷き詰められたパンの画像の大きさ調整 */
+.pan{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+.nav6{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
 }
